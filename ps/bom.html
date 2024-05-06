@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bom</title>
+</head>
+<body>
+    <button>hello</button>
+    <button>forward</button>
+    <script>
+        //var d=document.getElementsByTagName("button")
+        //d[0].addEventListener("click",()=>{
+        // window.location.assign
+           // window.location.assign("./index1.html")
+            
+       // })
+
+        var d=document.getElementsByTagName("button")
+       
+        d[0].addEventListener("click",()=>{
+              //  var a=alert("hi this is eswari")
+            var a=confirm("hi this is eswari")
+            console.log(a);
+            if(a){
+                window.open("./index1.html")
+            }
+            })
+
+
+        d[1].addEventListener("click",()=>{
+
+            window.history.forward()
+        })
+
+    </script>
+</body>
+</html>

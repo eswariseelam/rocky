@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index1</title>
+</head>
+<body>
+    <h1>Session Storage Example- Tab2 </h1>
+    <button>close</button>
+    <button>backward</button>
+    <script>
+        var d=document.getElementsByTagName("button");
+
+        d[0].addEventListener("click",()=>{
+            window.close();
+        })
+
+        d[1].addEventListener("click",()=>{
+
+            window.history.back();
+        })
+
+        
+
+
+
+       function showSessionDataTab2(){
+            const data = sessionStorage.getItem("sessionKey");
+            alert(data ? `Data in session storage(Tab 2): ${data}` : "session storage")
+        }
+        
+    </script>
+    <div>
+        <button onclick="showSessionDataTab2()">show data from session storage(tab 2)</button>
+    </div>
+</body>
+</html>

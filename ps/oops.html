@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //class is nothing but a blue print  and object is represent the real time entity
+        /*  class clsname{
+            constructor(){
+                this.name="eshu"
+                this.phoneno="67890"
+            }
+        }
+        
+        var obj=new clsname()
+        console.log(obj.name);
+        console.log(obj.phoneno);*/
+        // 2
+        /* class hello {
+          constructor(name, pass) {
+            this.name = name;
+            this.pass = pass;
+          }
+          calling() {
+            console.log(this.name + " iam devi's brother");
+          }
+        }
+        var obj = new hello("Rocky", "devi@098");
+        //console.log(obj.name);
+        console.log(obj.calling());
+        // console.log(obj.calling);
+        var obj2 = new hello("lucky", "chinnari@123");
+        console.log(obj2.calling());*/
+
+        // inheritance
+        /* class hello {
+   
+           constructor(name, pass) {
+             this.name = name;
+             this.pass = pass;
+           }
+   
+           calling1() {
+   
+             console.log(this.name + " iam good dog");
+   
+           }
+   
+           calling2() {
+   
+             console.log("hi iam devi and chinnari brother");
+   
+           }
+         }
+         class child extends hello {
+   
+           constructor(name,pass,grad){
+   
+             super(name,pass); //super key is accesing constructor properties and also calling1,2
+   
+             this.grad=grad;
+           }
+           s1(){
+               console.log("eswari");
+           } 
+   
+         }
+         var obj1 = new child("rocky", "5259", "10th");
+         
+         var obj2=new hello("Rocky","563789")
+          console.log(obj2.calling1());
+         //var helloobj = new hello("rocky", "5259");
+         //console.log(helloobj.name);
+         console.log(obj1.s1());*/
+
+        //static is not directly access the object it's access the "class" name
+
+        class hello {
+
+            constructor(name,pass) {
+                this.name = name;
+                this.pass = pass;
+            }
+
+            static calling1(a) {
+    
+                console.log(a.name + " iam good dog");
+
+            }
+            static calling2() {
+
+                console.log("hi iam devi and chinnari brother");
+
+            }
+        }
+        var obj=new hello("eswari");
+        //console.log(hello.calling1());
+        console.log(hello.calling1(obj));
+
+      // closures:
+      //outer fun
+      /*function hello(){
+        var a=10;
+        return function(){
+            //lixical scope/environment
+            //inner fun
+            return function(){
+            console.log(a+100);
+            return "hi";
+        }
+    }
+}
+    /*  var b=hello()
+      console.log(b());
+      //currying
+      console.log(hello()()());*/
+
+
+    </script>
+</body>
+
+</html>

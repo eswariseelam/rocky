@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> session storage Example-</h1>
+    <script>
+        //fun to set data in session storage
+        function setsessionDate(){
+            const data=prompt("enter data to storage in local and session")
+            sessionStorage.setItem("session",data);
+            localStorage.setItem("local","eswari");
+            alert("data stored!");
+        }
+
+            //fun to show data from session storage
+            function showsessionDate(){
+            const data=sessionStorage.getItem("session");
+            alert(data ? `data in session storage:${data1}`:"session storage is empty");
+            }
+    </script>
+    <div>
+        <button onclick="setsessionDate()">set data in session storage</button>
+        <button onclick="showsessionDate()">show data from session storage</button>
+    </div>
+    <div>
+        <a href="index1.html" target="_blank">open Another Tab</a>    </div>
+</body>
+</html>

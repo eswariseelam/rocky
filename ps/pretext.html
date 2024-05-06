@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // prime reverse 2nd digit
+        num=+prompt("enter a number")
+        u=" "
+        for(i=1;i<=num;i++){
+            c=0
+            for(k=2;k<i;k++){
+                if(i%k==2){
+                    c++
+                    break;
+                }
+            }
+            if(c==0){
+                s=" ";
+                x=String(i)
+                for(j=length-1;j>=0;j--){
+                    s=s+x[j]
+                }
+                u=u+" "+s
+            }
+           
+        }
+        console.log(u);
+
+    </script>
+</body>
+</html>

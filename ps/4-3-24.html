@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //task-2 write a program that takes array of sub arrays
+        //input: [[4,5,6,5],[8,9,8,1],[7,5,2,5]]
+        //output:46       91         72
+        num = [[5, 6, 7, 6], [4, 4, 7]]
+        big = []
+        for (i of num) {
+            e = []
+            for (j of i) {
+                c = 0
+                for (k of i) {
+                    if (j == k) {
+                        c++
+                        break
+                    }
+                }
+                if (c == 1) {
+                    e.push(j)
+                }
+            }
+            big.push(e)
+        } 
+        console.log(big);
+
+
+        /*task-2 take array
+        input1:[5,65,89,12],input2:5
+        output: 4658912 + 5 = 4658917 =[4,6,5,8,9,1,7]*/
+        /* num=[5,65,89,12]
+         number=+prompt("enter a number")
+         new_num=Number(num.join(" "))+number
+         //console.log(new_num);
+         a=String(new_num).split("")
+         x=a.map(function(values){
+          values=Number(values)
+          return values
+         })
+         console.log(x);*/
+        //
+       /* num = [5, 65, 89, 12]
+        number = +prompt("enter a number")
+        new_num = Number(num.join(" ")) + number
+        console.log(new_num);
+        a = String(new_num).split("")
+        x = []
+        for (i of a) {
+            x.push(Number(i))
+        }
+        console.log(x);*/
+
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=<device-width>, initial-scale=1.0">-->
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1 heigth and low number add
+      /*arr=[5631,767,49024]
+        e=[]
+        
+        for(i of arr){
+            num=String(i)
+            max=num[0],min=num[0]
+            for(j of num){
+                if(j>=max){
+                max=Number(j)
+}
+       
+            if(j<min){
+                min=Number(j)
+            }
+        }
+        e.push(Number(max+min))
+    }
+    console.log(e);*/
+      //1.1
+      /* arr=[5631,767,49024]
+        e=[]
+        
+        for(i of arr){
+            num=String(i).split("").sort()
+            console.log(num);
+            e.push(Number(num[0])+Number(num[num.length-1]))
+        }
+       console.log(e);*/
+      //duplica number
+      arr=[677585,464,234,1212]
+       for(i of arr){
+        num=String(i)
+        for(j of num){ 
+            c=0
+            for(k of num){
+                if(j==k){
+                    c++
+                }
+            }
+            if(c>=2){
+                console.log(i);
+                 //break;
+            }
+        }                                 
+       }
+      // nearest prime number
+      /*arr = [8, 100, 16, 17, 21]; //arr=[8,100,16]
+      e = [];
+      function prime(num) {
+        if (num == 1) {
+          return false;
+        }
+        for (i = 2; i < num; i++) {
+          if (num % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      for (i of arr) {
+        (np = 0), (f = i), (b = i);
+        while (true) {
+          f++;
+          b--;
+          if (prime(f) || prime(b)) {
+            if (prime(f) && prime(b)) {
+              break;
+            }
+            if (prime(f)) {
+              np = f;
+              break;
+            }
+            if (prime(b)) {
+              np = b;
+              break;
+            }
+          }
+        }
+        if (np != 0) {
+          e.push(np);
+        }
+      }
+      console.log(e);
+      //
+      // nearest prime number
+      arr = [8, 100, 16, 17, 21]; //arr=[8,100,16]
+      e = [];
+      function prime(num) {
+        if (num == 1) {
+          return false;
+        }
+        for (i = 2; i < num; i++) {
+          if (num % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      for (i of arr) {
+        p = true;
+        (np = 0), (f = i), (b = i);
+        while (true) {
+          f++;
+          b--;
+          if (prime(f) || prime(b)) {
+            if (prime(f) && prime(b)) {
+              p = false;
+              break;
+            }
+            if (prime(f)) {
+              np = f;
+              break;
+            }
+            if (prime(b)) {
+              np = b;
+              break;
+            }
+          }
+        }
+        if (p) {
+          e.push(np);
+        }
+      }
+      console.log(e);*/
+    </script>
+  </body>
+</html>
